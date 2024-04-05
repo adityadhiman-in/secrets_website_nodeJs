@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secrets Website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        font-family: "Poppins", sans-serif;
+      }
+      :root {
+        --bgColor: #ffedd8;
+        --textcolor: #240a34;
+        --mainColor: #891652;
+        --bigFOnt: 5rem;
+        --medFont: 2.5rem;
+        --pFOnt: 1.25rem;
+      }
+      body {
+        background-color: var(--bgColor);
+      }
+      h1 {
+        font-size: var(--bigFOnt);
+        color: var(--textcolor);
+        text-align: center;
+        padding-bottom: 2%;
+      }
+      .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10% 1%;
+      }
+      .heading > p {
+        color: var(--textcolor);
+        font-size: var(--pFOnt);
+        font-weight: 400;
+        text-align: center;
+      }
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      label {
+        color: var(--textcolor);
+        font-size: var(--medFont);
+      }
+      input {
+        color: var(--textcolor);
+        padding: 0.65rem 2rem;
+      }
+      button {
+        color: var(--bgColor);
+        background-color: var(--mainColor);
+        padding: 0.45rem 1.25rem;
+        font-size: var(--pFOnt);
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+      }
+
+      /*-----ResponsiveNess Starts here----*/
+      @media (max-width: 600px) {
+        :root {
+          --bigFOnt: 2.5rem;
+          --medFont: 1.25rem;
+          --pFOnt: 0.925rem;
+        }
+        .heading > p {
+          padding: 2% 4%;
+        }
+        form {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Secrets Website</h1>
+      <p>
+        Hint : You are a programmer and you love programming, And You type every
+        password in camelCasing. Guess the password and unlock the secrets!
+      </p>
+    </div>
+
+    <form action="/submit" method="post">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter the password"
+      />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
